@@ -65,6 +65,8 @@ const fetchRecentTracks = async (accessToken) => {
 app.get('/', (req, res) => {
   getAccessToken().then((token) => {
     fetchRecentTracks(token).then((track) => {
+      console.log('Request');
+
       res.json(track);
     });
   });
