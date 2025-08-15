@@ -4,12 +4,7 @@ const axios = require('axios');
 const cors = require('cors');
 
 const app = express();
-app.use(
-  cors({
-    origin: ['http://localhost:5173/'],
-    methods: ['GET', 'POST'],
-  })
-);
+app.use(cors());
 
 const CLIENT_ID = process.env.SPOTIFY_CLIENT_ID;
 const CLIENT_SECRET = process.env.SPOTIFY_CLIENT_SECRET;
