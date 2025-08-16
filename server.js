@@ -67,6 +67,10 @@ app.get('/', (req, res) => {
   });
 });
 
+app.get('/ping', (req, res) => {
+  res.sendStatus(200);
+});
+
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on port: ${PORT}`);
 });
